@@ -293,17 +293,27 @@ body {
 /* keep the calendar icon dark and clickable */
 .form-group input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(0);
-    /* dark icon */
     cursor: pointer;
 }
 
-/* OPTIONAL – give the ‘dd-mm-yyyy’ text a faint look */
-@supports (-webkit-touch-callout: none) {
+/* simulate faint placeholder style */
+input[type="date"]::-webkit-datetime-edit {
+    color: #020202;
+    font-style: sans-serif;
+}
 
-    /* targets WebKit browsers */
-    input[type="date"]::-webkit-datetime-edit {
-        color: #6b6b6b;
-        font-style: italic;
+
+@media (max-width: 480px) {
+    .form-group select {
+        font-size: 16px;
+        padding: 14px 16px;
+        border-radius: 5px;
+        background-size: 18px;
+    }
+
+    input[type="date"] {
+        font-size: 16px;
+        padding: 14px 16px;
     }
 }
 
