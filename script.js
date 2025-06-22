@@ -2,19 +2,6 @@
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('active');
 }
-document.addEventListener("DOMContentLoaded", function () {
-    const arrivalInput = document.querySelector('input[name="arrival"]');
-    const departureInput = document.querySelector('input[name="departure"]');
-
-    if (arrivalInput && departureInput) {
-        new Datepicker(arrivalInput, {
-            format: 'yyyy-mm-dd'
-        });
-        new Datepicker(departureInput, {
-            format: 'yyyy-mm-dd'
-        });
-    }
-});
 
 // Headline text animation
 const texts = [
