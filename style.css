@@ -235,13 +235,83 @@ body {
     color: #333;
 }
 
-.form-group input,
+/* .form-group input,
 .form-group select {
     padding: 10px;
     border: none;
     border-radius: 4px;
     background: #f5f5f5;
     font-size: 14px;
+} */
+
+/* --------- SELECT DROPDOWNS: Adults & Children ----------- */
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    background: #f8f8f8;
+    color: #000;
+    border: 2px solid #070707;
+    /* black border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    /* remove native arrow styling (iOS) */
+    -moz-appearance: none;
+    /* Firefox */
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+}
+
+/* Optional: mobile-friendly padding */
+@media (max-width: 480px) {
+    .form-group select {
+        padding: 12px 16px;
+    }
+}
+
+/* ----- MOBILE-SAFE DATE INPUT STYLES ------------------- */
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px 14px;
+    /* enough padding for thumbs */
+    font-size: 15px;
+    /* slightly larger on mobile */
+    background: #f8f8f8;
+    color: #000;
+    border: 2px solid #000;
+    /* black border you wanted  */
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* avoid the browser shrinking the font on iOS */
+    -webkit-text-size-adjust: 100%;
+}
+
+/* keep the calendar icon dark and clickable */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+    /* dark icon */
+    cursor: pointer;
+}
+
+/* OPTIONAL – give the ‘dd-mm-yyyy’ text a faint look */
+@supports (-webkit-touch-callout: none) {
+
+    /* targets WebKit browsers */
+    input[type="date"]::-webkit-datetime-edit {
+        color: #6b6b6b;
+        font-style: italic;
+    }
+}
+
+/* small-screen tweaks */
+@media (max-width: 480px) {
+    .form-group {
+        padding: 12px 16px;
+    }
 }
 
 .check-btn {
