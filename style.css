@@ -121,6 +121,12 @@ body {
     animation: zoomHero 10s ease-in-out infinite alternate;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+  }
+}
+
 .overlay {
     position: absolute;
     top: 0;
